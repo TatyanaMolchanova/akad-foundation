@@ -1,0 +1,129 @@
+h1, h2, h3, h4, h5, h6 {
+	text-transform: uppercase;
+}
+
+.tabs {
+	border: none;
+	margin-bottom: - 2px; // делаем полосочку прямо по линии под табом заголовка
+	display: flex;
+	justify-content: space-between;
+	@media screen and (max-width: 360px) {
+		a h6 {
+			font-size: 1em;
+		}
+	}
+
+}
+
+.tabs-title.is-active {
+	border-bottom: 2px solid $brand;
+}
+
+.tabs-content {
+	border: none;
+	border-top: 2px solid $light-gray;
+}
+
+.callout-akad {
+	display: flex;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	justify-content: space-between;
+	margin-bottom: 0;
+}
+
+.aside {
+	margin-bottom: $global-margin * 3;
+}
+
+.tag {
+	text-transform: uppercase;
+	color: $medium-gray;
+	background-color: $light-gray;
+	font-size: 1.1rem;
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
+	margin-bottom: .3rem;
+	padding: .5rem .75rem;
+}
+
+.tag-brand {
+	background-color: $brand;
+	color: $white;
+}
+
+a {
+	&:hover,
+	&:focus,
+	&:active {
+		color: $brand;
+	}
+}
+
+.card-stat {
+	margin: $global-margin * 2 0;
+	span {
+		margin-left:  $global-margin * 2;
+		.icon {
+			font-size: 1.25em;
+			margin-right: $global-margin / 2;
+		}
+	}
+	&-likes .icon {
+		color: $alert-color;
+	}
+}
+
+.card-link {
+	text-transform: uppercase;
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
+	color: $dark-gray;
+	.icon {
+		margin-left: $global-margin / 2;
+	}
+}
+
+header {
+	min-height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	margin-bottom: $global-margin * 5;
+}
+
+.breadcrumbs {
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
+	display: inline-block;
+	margin: 0 auto;
+	a {
+		&:hover {
+			color: $brand;
+			text-decoration: none;
+		}
+	}
+}
+
+.akad-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	// width: 100%;
+	text-transform: uppercase;
+	a {
+		color: $dark-gray;
+		&:hover {
+			color: $brand;
+		}
+	}
+	.menu {
+		justify-content: flex-end;
+	}
+}
